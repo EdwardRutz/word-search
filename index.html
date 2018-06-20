@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q-Tip | IDST</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//demo.productionready.io/main.css">
+    <link title="no title" href="style.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+<header>
+    <h1>Q-Tip</h1>
+</header>
+<br><br>
+
+<!----- SIDE BAR - LEFT  ----->
+
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+
+            <!-- Keywords - Text Area Input -->
+            <div class="">
+                <label for="keyWords">Key Words</label>
+                <textarea class="form-control" rows="5" id="keyWords" placeholder="Enter Search Terms..."></textarea>
+            </div>
+
+            <hr>
+
+            <!-- MGRS Grid Digit Size Input-->
+            <!--TODO Replace with Slider to choose 10, 8, 6 grid -->
+
+            <div class="checkbox">
+                <label>MGRS Grids</label>
+                <form>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="" checked="checked">6
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="" checked="checked">8
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="" checked="checked">10
+                    </label>
+                </form>
+            </div>
+
+            <hr>
+
+            <!-- Search and Reset Buttons -->
+            <div>
+                <button onclick="textSearch()" type="button" class="btn btn-success">SEARCH</button>
+                <button onclick="document.getElementsByClassName('resetAll').value = ''" class="btn" disabled>RESET</button>
+            </div>
+
+        </div>
+
+        <!----- MIDDLE WINDOW  ----->
+
+        <div class="col-sm-7 text-left">
+            <div>
+                <label for="reporting">Text</label>
+                <textarea class="form-control resetAll" rows="15" id="reporting" placeholder="Copy and Paste Text Here..."></textarea>
+            </div>
+        </div>
+
+        <!----- SIDE BAR - RIGHT  ----->
+
+        <div class="col-sm-2 sidenav">
+            <div class="box">
+                <p>Hit Term (Count)</p>
+                <p id="results"></p>
+            </div>
+            <div class="box">
+                <p>Total Location Count</p>
+            </div>
+            <div class="box">
+                <p>Extracted Location </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----- OUTPUT  ----->
+
+<div class="col-sm-12 text-left">
+    <hr>
+    <h4 class="searchHeader">Search Results</h4>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>TERM</th>
+            <th>MGRS</th>
+            <th>GIST</th>
+            <th>POINT</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>keyword</td>
+            <td>grid</td>
+            <td>
+                Lucas ipsum dolor sit amet yoda dantooine fett mandalorians endor mace antilles windu darth yoda.
+                Organa skywalker kessel binks.
+            </td>
+            <td>point</td>
+        </tr>
+        <tr>
+            <td>keyword</td>
+            <td>grid</td>
+            <td>
+                Lucas ipsum dolor sit amet yoda dantooine fett mandalorians endor mace antilles windu darth yoda.
+                Organa skywalker kessel binks.
+            </td>
+            <td>point</td>
+        </tr>
+        <tr>
+            <td>keyword</td>
+            <td>grid</td>
+            <td>
+                Lucas ipsum dolor sit amet yoda dantooine fett mandalorians endor mace antilles windu darth yoda.
+                Organa skywalker kessel binks.
+            </td>
+            <td>point</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!----- FOOTER  ----->
+<div>
+    <footer class="container-fluid text-center">
+        <p>Intelligence Data Science Team, SOCOM</p>
+    </footer>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
