@@ -52,7 +52,7 @@ label {
 
 /* --- BOX EFFECT --- */
 .box {
-  height: 100px;
+  height: 125px;
   width: 200px;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
