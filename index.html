@@ -22,9 +22,9 @@
 
             <!-- Keywords - Text Area Input - keywordsIn -->
             <div class="">
-                <label for="keywordsIn">Key Words</label>
-                <textarea class="form-control" rows="5" id="keywordsIn" placeholder="Enter Search Terms...">
-                    blue green yellow
+                <label for="keywordsIn">Search Term</label>
+                <textarea class="form-control" rows="5" id="keywordsIn" placeholder="Enter search terms, separate words with a comma...">
+                blue, green, yellow
                 </textarea>
             </div>
 
@@ -52,7 +52,7 @@
 
             <!-- Search and Reset Buttons -->
             <div>
-                <button onclick="textSearch()" type="button" class="btn btn-success">SEARCH</button>
+                <button onclick="mainEvent()" type="button" class="btn btn-success">SEARCH</button>
                 <button onclick="resetForm()" class="btn" disabled>RESET</button>
             </div>
 
@@ -63,7 +63,9 @@
         <div class="col-sm-7 text-left">
             <div>
                 <label for="reportingIn">Text</label>
-                <textarea class="form-control resetAll" rows="15" id="reportingIn" placeholder="Copy and Paste Text Here..."></textarea>
+                <textarea class="form-control resetAll" rows="15" id="reportingIn" placeholder="Copy and Paste Text Here...">
+                    blue green yellow
+                </textarea>
             </div>
         </div>
 
