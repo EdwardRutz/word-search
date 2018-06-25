@@ -76,7 +76,6 @@ label {
   color: white;
 }
 
-
 /* --- FOOTER -- */
 /* Set black background color, white text and some padding */
 footer {
@@ -88,6 +87,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
+  text-align: center;
 }
 
 /*----- SLIDER ------*/

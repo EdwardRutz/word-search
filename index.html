@@ -12,9 +12,18 @@
     <h1>Q-Tip</h1>
 </header>
 <br><br>
+<div>
+    <p>Q-Tip is a fast data search of key terms, correlated with MGRS grids and reporting gist.</p>
+    <ul>
+        <li>Enter your key terms seperated by commas (city, town, village)</li>
+        <li>Choose MGRS grid precision (All, 10, 8, 6)</li>
+        <li>Copy and past your documentation into the document text box</li>
+        <li>Click the Search button to see results below</li>
+    </ul>
+</div>
+<hr>
 
 <!-- *****  SIDE BAR - LEFT  ***** -->
-
 
 <div class="container-fluid text-center">
     <div class="row content">
@@ -23,9 +32,8 @@
             <!-- Keywords - Text Area Input - keywordsIn -->
             <div class="">
                 <label for="keywordsIn">Search Term</label>
-                <textarea class="form-control" rows="5" id="keywordsIn" placeholder="Enter search terms, separate words with a comma...">
-                blue, green, yellow
-                </textarea>
+                <textarea class="form-control" rows="5" id="keywordsIn"
+                  placeholder="Enter search terms separated commas...">city, town, village, blue</textarea>
             </div>
 
             <hr>
@@ -36,15 +44,10 @@
             <div class="checkbox">
                 <label>MGRS Grids</label>
                 <form>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="" checked="checked">6
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="" checked="checked">8
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" value="" checked="checked">10
-                    </label>
+                    <input type="radio" name="gridsIn" value="All" checked> All  &emsp;
+                    <input type="radio" name="gridsIn" value="10"> 10 &emsp;
+                    <input type="radio" name="gridsIn" value="8"> 8 &emsp;
+                    <input type="radio" name="gridsIn" value="6"> 6  &emsp;
                 </form>
             </div>
 
@@ -52,7 +55,7 @@
 
             <!-- Search and Reset Buttons -->
             <div>
-                <button onclick="mainEvent()" type="button" class="btn btn-success">SEARCH</button>
+                <button onclick="textSearch()" type="button" class="btn btn-success">SEARCH</button>
                 <button onclick="resetForm()" class="btn" disabled>RESET</button>
             </div>
 
@@ -62,10 +65,9 @@
 
         <div class="col-sm-7 text-left">
             <div>
-                <label for="reportingIn">Text</label>
-                <textarea class="form-control resetAll" rows="15" id="reportingIn" placeholder="Copy and Paste Text Here...">
-                    blue green yellow
-                </textarea>
+                <label for="reportingIn">Document Text</label>
+                <textarea class="form-control resetAll" rows="15" id="reportingIn"
+                  placeholder="Copy and Paste Text Here...">city town village city town city</textarea>
             </div>
         </div>
 
