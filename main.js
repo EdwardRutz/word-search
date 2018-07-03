@@ -22,7 +22,9 @@ function textSearch() {
     let pattern = new RegExp(word, 'ig');
     console.log('pattern', pattern);
 
+    //TODO FIX If the keyword/pattern is not found in the match/reporting then it returns undefined and stops
     while ((match = pattern.exec(reporting))) {
+        console.log('match', match);
         console.log('!matchObj[match[0]] term match returns false...', !matchObj[match[0]]);
 
       //If matchObj[match[0]] is false
@@ -37,12 +39,12 @@ function textSearch() {
         console.log('matchObj[match[0]]', matchObj[match[0]]);
 
       } else {
-        matchObj[match[0]].indexes.add(match.index);
-        matchObj[match[0]].count = matchObj[match[0]].indexes.size;
-        console.log('add term location to set...', matchObj[match[0]].indexes.add(match.index));
-        console.log('add term count to set...', matchObj[match[0]].count);
+          matchObj[match[0]].indexes.add(match.index);
+          matchObj[match[0]].count = matchObj[match[0]].indexes.size;
+          console.log('add term location to set...', matchObj[match[0]].indexes.add(match.index));
+          console.log('add term count to set...', matchObj[match[0]].count);
+        }
       }
-    }
   });
 
   // return matchObj;
